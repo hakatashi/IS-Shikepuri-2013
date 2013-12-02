@@ -22,7 +22,7 @@
 
 配布資料のgjp.rbには以下のように書かれています。（汚いインデントを整形してあります）
 
-```ruby:gjp.rb
+```ruby
 load("./abs.rb")
 load("./swap.rb")
 
@@ -66,7 +66,7 @@ end
 
 abs関数を定義し、swap関数を展開します。
 
-```ruby:gjp.rb
+```ruby
 def abs(n)
   # nの絶対値を求める
 end
@@ -127,7 +127,7 @@ abs関数といえばふつう絶対値を求める関数を指します。maxro
 
 ## 最終的なプログラム
 
-```ruby:gjp.rb
+```ruby
 def abs(n)
   if n > 0
     n
