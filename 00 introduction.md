@@ -61,3 +61,45 @@ UTaisakuから。
 * [情報科学 2011年度 共通問題 解答例・解説](http://todai.info/sikepuri/search/show.php?id=1617)
 
 ※共通資料のページにあるとおり、2009年度以前の試験は範囲が大きく異なります。
+
+### 範囲解説など
+
+UTaisakuから。
+
+* [H22冬学期情報科学シケプリ ver 1.1](http://todai.info/sikepuri/search/show.php?id=1193)
+
+試験範囲の分かりやすいまとめです。復習向け。
+
+* [電車の中で読もうと思えば読めないことはない情報科学シケプリ](http://todai.info/sikepuri/search/show.php?id=1194)
+
+わりと踏み込んだ内容に触れています。ただ電車の中で読むのはかなり厳しいかと…。
+
+* [第二学期 情報科学 一歩進んだプログラミングのために 補足とかいろいろ](http://todai.info/sikepuri/search/show.php?id=1037)(2009年度)
+
+2009年度のシケプリですが、非常に詳細な内容に触れていて、なおかつ組版がきれいです。余力のある人の読み物向けです。
+
+## Rubyの導入
+
+各自のPCでRubyを使えるようにします。
+
+情報教育等にインストールされているrubyのバージョンは1.8.7なので、それに合わせてインストールした方がいいでしょう。
+
+### isrbごとインストール
+
+isrbは東大独自の対話環境です。[ECCSのページ](http://lecture.ecc.u-tokyo.ac.jp/johzu/joho-kagaku/text/isrb/)でWindows用のインストーラーと、各環境向けの導入方法が公開されています。とりあえず筆者の環境(Windows 8 pro 64bit)でも動きました。
+
+ただ、 Mac だとうまくいかないという話も散見します。
+
+### Rubyだけをインストール(isrbは使えません)
+
+Rubyだけをインストールするなら簡単です。ターミナルからrubyコマンドとirbコマンドが使えるようになります。
+
+Mac OS X の場合、最初からruby 1.8.7がインストールされています。
+
+Windows の場合、[RubyInstaller](http://rubyinstaller.org/)を使用することができます。[Download](http://rubyinstaller.org/downloads/)の「Ruby 1.8.7-p374」から入手し、説明に従ってインストールしてください。
+
+Linux は・・・まあ適当にお願いします。
+
+## 配布資料
+
+先に言ったとおり、 http://lecture.ecc.u-tokyo.ac.jp/johzu/joho-kagaku/2013/ で配布されています。ただ配布プログラムについてひとこと言わせてもらうと、インデントにスペースとタブが混在してたり、変数名が一文字だったりいろいろとクズいです。
