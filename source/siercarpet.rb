@@ -1,4 +1,4 @@
-# �J���g�[���W���̃v���O�����̏Ă������ł��B
+# カントール集合のプログラムの焼き直しです。
 
 load("./make2d.rb")
 
@@ -8,21 +8,21 @@ def siercarpet(n)
   show(a)
 end
 
-# a �Ƃ����z��� (x, y) ��������Ƃ��� n ���̃V�F���s���X�L�[�̃J�[�y�b�g�𐶐�����֐�
+# a という配列に (x, y) を左上隅とする n 次のシェルピンスキーのカーペットを生成する関数
 def subsiercarpet(a, n, x, y)
-  # 0���Ȃ�P���Ɉ�h��Ԃ�����
+  # 0次なら単純に一個塗りつぶすだけ
   if n == 0
     a[x][y] = 1
-  else # 0���łȂ��Ȃ�A���������̎����̃T�u�J�[�y�b�g���Ăяo��
-    # 3x3�̃T�u�J�[�y�b�g���K�v�Ȃ̂ŁAx������y�����ɂ��̉񐔂��������[�v������
-    for carpX in 0..2 do
-      for carpY in 0..2 do
-        # �܂�Ȃ��̈������
-        if carpX != 1 || carpY != 1
-          # �T�u�J�[�y�b�g���A�[�I�ɌĂяo���܂��B
-          # ������̌v�Z������������Ƃ�₱������������܂���B
-          # �Ȃ��Aruby�ł͏�Z(*)���p��(**)���D�悳��܂��B
-          subsiercarpet(a, n - 1, x + carpX * 3 ** (n-1), y + carpY * 3 ** (n-1))
+  else # 0次でないなら、いっこ下の次元のサブカーペットを呼び出す
+    # 3x3のサブカーペットが必要なので、x方向とy方向にその回数ずつだけループさせる
+    for subX in 0..2 do
+      for subY in 0..2 do
+        # まんなかの一個を除く
+        if subX != 1 || subY != 1
+          # サブカーペットを帰納的に呼び出します。
+          # 左上隅の計算部分がちょっとややこしいかもしれません。
+          # なお、rubyでは乗算(*)より冪乗(**)が優先されます。
+          subsiercarpet(a, n - 1, x + subX * 3 ** (n-1), y + subY * 3 ** (n-1))
         end
       end
     end
