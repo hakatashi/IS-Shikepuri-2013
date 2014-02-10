@@ -4,7 +4,6 @@ def siercarpet(n)
   a = make2d(3**n, 3**n)
   subsiercarpet(a, n, 0, 0)
   show(a)
-  print(a)
 end
 
 def subsiercarpet(a, n, x, y)
